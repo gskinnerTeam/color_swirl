@@ -4,6 +4,8 @@ non-clearing stage. A little randomness in the color and size gives the overdraw
 
 This lab can be viewed at http://labs.gskinner.com/29/color_swirl
 
-![Color Swirl](screenshot.jpg "Example Output")
+![Color Swirl](sample.jpg "Example Output")
 
- 
+##Authors##
+ * Lanny McNie
+ * Sebastian DeRossi
