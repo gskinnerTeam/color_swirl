@@ -16,9 +16,9 @@
 <body class="template">
 
 <canvas id="canvas" width="800" height="600"></canvas>
-<div class="controls">
+<div class="controls" data-label="options:">
     <a href="#" onclick="reset()">Run Again</a>
-    <a href="#" onclick="handleSave()" class="no-mobile">Save Image</a>
+    <!--<a href="#" onclick="handleSave()" class="no-mobile">Save Image</a>-->
 </div>
 
 <script src="http://code.createjs.com/createjs-2015.05.21.min.js"></script>
@@ -81,7 +81,6 @@
             tween.setPaused(true);
             createjs.Ticker.off("tick", tickListener);
             tickListener = null;
-            console.log(colors);
         }
     }
 
@@ -91,7 +90,6 @@
 
         count = 0;
         drawLoops = MAX_LOOPS + (Math.random() * (MAX_LOOPS * 0.4 - 0.2) | 0);
-        console.log(drawLoops);
         colors = [];
 
         tween.setPosition(0);
@@ -128,7 +126,11 @@
 
     function handleSave(event) {
         var img = stage.toDataURL("#000");
-        window.open(img, "Save Image");
+        try {
+            window.open(img, "Title");
+        } catch (e) {
+
+        }
         return false;
     }
 
